@@ -1,0 +1,6 @@
+Public-demo metadata and derived symbolic annotations: CC BY 4.0.
+Attribution: LAION, Singing Voice 1K / LeVo2.
+Source: https://huggingface.co/datasets/laion/singing-voice-1k
+Changes: extraction, automatic transcription, Procedural fusion, MIDI serialization and visualization.
+License: https://creativecommons.org/licenses/by/4.0/
+Application code outside these data files is MIT.

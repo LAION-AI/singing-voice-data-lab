@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "time": 1794734661.567627,
+  "anonymous": true,
+  "no_authentication": true,
+  "cases": [
+    {
+      "pipeline": "rosvot_procedural_segmented",
+      "leadPlayed": true,
+      "leadPaused": true,
+      "pianoPlaying": true,
+      "pianoAdvanced": true
+    },
+    {
+      "pipeline": "rosvot_procedural_ensemble",
+      "leadPlayed": true,
+      "leadPaused": true,
+      "pianoPlaying": true,
+      "pianoAdvanced": true
+    },
+    {
+      "pipeline": "rosvot_procedural_gapfill",
+      "leadPlayed": true,
+      "leadPaused": true,
+      "pianoPlaying": true,
+      "pianoAdvanced": true
+    },
+    {
+      "pipeline": "rosvot_procedural_vote_gapfill",
+      "leadPlayed": true,
+      "leadPaused": true,
+      "pianoPlaying": true,
+      "pianoAdvanced": true
+    },
+    {
+      "pipeline": "rosvot",
+      "leadPlayed": true,
+      "leadPaused": true,
+      "pianoPlaying": true,
+      "pianoAdvanced": true
+    },
+    {
+      "pipeline": "procedural",
+      "leadPlayed": true,
+      "leadPaused": true,
+      "pianoPlaying": true,
+      "pianoAdvanced": true
+    }
+  ],
+  "full_audio": true,
+  "midi_download_exact": true,
+  "extra_recordings": [
+    "C13",
+    "C25"
+  ],
+  "page_errors": []
+}

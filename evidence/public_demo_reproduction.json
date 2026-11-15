@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "recordings": 25,
+  "exact_token_and_midi_pairs": 100,
+  "neural_inference": false
+}

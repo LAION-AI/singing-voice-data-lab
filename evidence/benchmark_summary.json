@@ -1,0 +1,97 @@
+{
+  "recordings": 75,
+  "summary": [
+    {
+      "pipeline": "game",
+      "tracks": 75,
+      "pearson": 0.898895932897113,
+      "coverage": 0.9446693657219973,
+      "within_50_cents_of_all_voiced": 0.5970362435279415,
+      "within_100_cents_of_all_voiced": 0.7212863705972435,
+      "median_abs_cents": 28.6346435546875
+    },
+    {
+      "pipeline": "rosvot",
+      "tracks": 75,
+      "pearson": 0.9004166475320526,
+      "coverage": 0.9783596624107336,
+      "within_50_cents_of_all_voiced": 0.6218152866242038,
+      "within_100_cents_of_all_voiced": 0.7503373819163293,
+      "median_abs_cents": 28.479385375976562
+    },
+    {
+      "pipeline": "stars",
+      "tracks": 75,
+      "pearson": 0.7711430154376562,
+      "coverage": 0.9407407407407408,
+      "within_50_cents_of_all_voiced": 0.4307248236048749,
+      "within_100_cents_of_all_voiced": 0.5439384220654265,
+      "median_abs_cents": 53.50379943847656
+    },
+    {
+      "pipeline": "procedural",
+      "tracks": 75,
+      "pearson": 0.9786211646856886,
+      "coverage": 0.8922222222222222,
+      "within_50_cents_of_all_voiced": 0.6877343331547938,
+      "within_100_cents_of_all_voiced": 0.8249329758713136,
+      "median_abs_cents": 21.067428588867188
+    },
+    {
+      "pipeline": "muscriptor_large",
+      "tracks": 75,
+      "pearson": 0.8416860243454815,
+      "coverage": 0.8975418093894821,
+      "within_50_cents_of_all_voiced": 0.45031905195989064,
+      "within_100_cents_of_all_voiced": 0.5509380194728093,
+      "median_abs_cents": 35.042476654052734
+    },
+    {
+      "pipeline": "muscriptor_medium",
+      "tracks": 75,
+      "pearson": 0.8462781395446627,
+      "coverage": 0.9451073985680191,
+      "within_50_cents_of_all_voiced": 0.46634529548294945,
+      "within_100_cents_of_all_voiced": 0.5756608933454876,
+      "median_abs_cents": 33.63323211669922
+    },
+    {
+      "pipeline": "rosvot_procedural_ensemble",
+      "tracks": 75,
+      "pearson": 0.9028250352801824,
+      "coverage": 0.9783596624107336,
+      "within_50_cents_of_all_voiced": 0.6252319109461967,
+      "within_100_cents_of_all_voiced": 0.7530364372469636,
+      "median_abs_cents": 28.499221801757812
+    },
+    {
+      "pipeline": "rosvot_procedural_gapfill",
+      "tracks": 75,
+      "pearson": 0.9020760013165728,
+      "coverage": 0.989228436926514,
+      "within_50_cents_of_all_voiced": 0.6263791374122367,
+      "within_100_cents_of_all_voiced": 0.768334771354616,
+      "median_abs_cents": 28.446197509765625
+    },
+    {
+      "pipeline": "rosvot_procedural_vote_gapfill",
+      "tracks": 75,
+      "pearson": 0.9072577393615199,
+      "coverage": 0.989228436926514,
+      "within_50_cents_of_all_voiced": 0.6369742990654206,
+      "within_100_cents_of_all_voiced": 0.7678812415654521,
+      "median_abs_cents": 27.813339233398438
+    },
+    {
+      "pipeline": "rosvot_procedural_segmented",
+      "tracks": 75,
+      "pearson": 0.9247436590721664,
+      "coverage": 0.989228436926514,
+      "within_50_cents_of_all_voiced": 0.6718815185648728,
+      "within_100_cents_of_all_voiced": 0.8170686456400742,
+      "median_abs_cents": 25.400352478027344
+    }
+  ],
+  "ground_truth": false,
+  "note": "Automatic RMVPE reference agreement. Shared estimator bias. No audio or per-recording source metadata is redistributed here."
+}

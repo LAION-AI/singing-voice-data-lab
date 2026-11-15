@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "recordings": 75,
+  "variants": 4,
+  "exact_note_token_and_midi_outputs": 300,
+  "gpu_inference": false
+}

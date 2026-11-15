@@ -1,0 +1,5 @@
+gradio==5.49.1
+numpy>=2,<3
+pandas>=2
+plotly>=6
+filelock>=3

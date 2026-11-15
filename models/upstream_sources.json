@@ -1,0 +1,91 @@
+{
+  "github": {
+    "GAME": {
+      "repo": "openvpi/GAME",
+      "commit": "69ba01ded0ddda5495e51ba373685f1be1a67ea2",
+      "default_branch": "main"
+    },
+    "ROSVOT": {
+      "repo": "RickyL-2000/ROSVOT",
+      "commit": "3c8332bf43adae35f6e4d64971862f2f6139b310",
+      "default_branch": "main"
+    },
+    "STARS": {
+      "repo": "gwx314/STARS",
+      "commit": "f0e43e96cfe953f71a6cf9efd8b908b2c9d7e167",
+      "default_branch": "main"
+    },
+    "TIFA": {
+      "repo": "openvpi/TIFA",
+      "commit": "7b210ca36ff5a2b79187fb1727af58fc977cc301",
+      "default_branch": "main"
+    },
+    "MOSS-Audio": {
+      "repo": "OpenMOSS/MOSS-Audio",
+      "commit": "66326e6e0db34f036c86a76ba005efa4830c69dd"
+    },
+    "transformers": {
+      "repo": "huggingface/transformers",
+      "commit": "109a7d19bf667168837f32929e00b791e195d14d"
+    }
+  },
+  "huggingface": {
+    "lfm3": {
+      "repo": "LiquidAI/LFM3-Audio-2B",
+      "revision": "2d6c1f99c129b3ef07a8d168bc0ff08e2bdb93f1",
+      "type": "model"
+    },
+    "moss_audio": {
+      "repo": "OpenMOSS-Team/MOSS-Audio-8B-Instruct",
+      "revision": "d4dc5a6d8cd79b43dcd82884c75e303b1ecd016d",
+      "type": "model"
+    },
+    "nemotron": {
+      "repo": "nvidia/NVIDIA-Nemotron-3.5-Transcribe-30B-A4B",
+      "revision": "c17667641642c4265ff2b7037dd101b7d4567634",
+      "type": "model"
+    },
+    "stars": {
+      "repo": "verstar/STARS",
+      "revision": "744a7ad02e1d788452293cd903ea6a933f7862c4",
+      "type": "model"
+    },
+    "parakeet": {
+      "repo": "moondream/parakeet-redux",
+      "revision": "2bf128600aac4b16946f7ed8372e56117fe5e23b",
+      "type": "model"
+    }
+  },
+  "official_release_archives": {
+    "rosvot": {
+      "url": "https://drive.google.com/file/d/1JNtNT37KiLq9uFQqHk7JFs-3trxd3bRh/view",
+      "archive": "checkpoints.zip"
+    },
+    "game": {
+      "release": "openvpi/GAME@v1.0.0",
+      "asset": "GAME-1.0-large.zip"
+    },
+    "tifa": {
+      "release": "openvpi/TIFA@v1.0.0",
+      "asset": "TIFA-1.0-ST.zip"
+    },
+    "mega53": {
+      "upstream": "https://github.com/ZFTurbo/Music-Source-Separation-Training",
+      "commit": "f0b527736e7da24eae5b561a2bb1efd0569ec757",
+      "release": "v1.0.21",
+      "assets": [
+        {
+          "name": "mvsep_mega_model_bs_roformer_53_stems.yaml",
+          "url": "https://github.com/ZFTurbo/Music-Source-Separation-Training/releases/download/v1.0.21/mvsep_mega_model_bs_roformer_53_stems.yaml",
+          "bytes": 4184
+        },
+        {
+          "name": "mvsep_mega_model_bs_roformer_53_stems_v1.ckpt",
+          "url": "https://github.com/ZFTurbo/Music-Source-Separation-Training/releases/download/v1.0.21/mvsep_mega_model_bs_roformer_53_stems_v1.ckpt",
+          "bytes": 1368919887
+        }
+      ],
+      "patch": "BSRoformer.forward(active_stem_ids) computes shared backbone once and requested mask heads only; local executed source is vendored unchanged in upstream/MEGA53"
+    }
+  }
+}

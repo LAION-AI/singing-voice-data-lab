@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "tests": 4,
+  "separator_dsp": "Identity-predictor stereo overlap-add, short final window, batch sizes 1/2",
+  "gpu_inference": false,
+  "checkpoint_tensor_equality_and_strict_load": true
+}

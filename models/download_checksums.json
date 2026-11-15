@@ -1,0 +1,27 @@
+[
+  {
+    "file": "models/game.zip",
+    "bytes": 366297733,
+    "sha256": "f45eac9fbb92b82fe67c00f29efad52954469897eb64e5bd5924a43dc5deb9b6"
+  },
+  {
+    "file": "models/tifa.zip",
+    "bytes": 150789526,
+    "sha256": "6da6832cd2cb981aae1ccc2d9330f8f7c085ce7977d1eb13bff63531d038a88b"
+  },
+  {
+    "file": "models/rosvot.zip",
+    "bytes": 584407709,
+    "sha256": "b6055e81315b93415c9bd7fc48e10a28a3da1bea960cab7385483bd7443ba852"
+  },
+  {
+    "file": "models/generaluser.sf2",
+    "bytes": 32319396,
+    "sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe"
+  },
+  {
+    "file": "models/mega53/mvsep_mega_model_bs_roformer_53_stems_v1.ckpt",
+    "bytes": 1368919887,
+    "sha256": "c62820893bbf86d4e734f966bd142d9157cfc8bb8e79e9d8f9ea553f3ff3519f"
+  }
+]
