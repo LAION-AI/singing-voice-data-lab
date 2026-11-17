@@ -3,12 +3,15 @@
 [Public synthetic singing corpus](https://huggingface.co/datasets/laion/synthetic-singing-voice)
 · [Experimental singing checkpoint](https://huggingface.co/laion/Humaneness-Voice-Large-1.7-Singing-Experimental)
 
-The corpus combines 49,881 lyric songs in English, German, Dutch, French and
-Spanish, 9,988 nonlexical songs, and 146,640 LeVo singing recordings. It retains
+The raw corpus combines 49,993 lyric songs in English, German, Dutch, French and
+Spanish, 10,000 nonlexical songs, and 146,640 LeVo singing recordings. It retains
 the available original metadata, audio and MOSS-v2 q12/q32 arrays, and adds the
 same **rosvot_procedural_segmented** note recipe used by this laboratory.
 The dataset card reports actual release progress; planned counts are not a claim
 that every annotation has already been uploaded. All recordings are synthetic.
+The earlier checkpoint used the subset with complete observed scripts:
+49,881 newer lyric songs, 9,988 nonlexical songs and 144,944 LeVo songs.
+The additional 1,820 raw recordings remain available with missing-script flags.
 
 These inputs are already intended to be isolated solo voices. This bulk path
 **skips separation**, preserving original audio/token alignment. Use the ordinary
