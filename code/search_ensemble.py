@@ -80,6 +80,13 @@ def candidate_notes(c,rule):
             output.append(note)
         elif rule['kind']=='segmented':
             a,b=s['a'],s['b'];seq=np.full(b-a,original['pitch'],dtype=int);local=c['p'][a:b]
+            if not len(seq):
+                # A sub-grid endpoint note can lie after the final F0 sample.
+                # No Procedural evidence means retain the original ROSVOT note.
+                note=copy.deepcopy(original)
+                note['ensemble']=dict(original_rosvot_pitch=original['pitch'],original_note_index=index,
+                    changed=False,added=False,split_parent=False,decision='keep ROSVOT note: no aligned Procedural frames')
+                output.append(note);continue
             start=0
             while start<len(local):
                 end=start+1

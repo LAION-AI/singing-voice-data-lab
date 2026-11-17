@@ -85,6 +85,13 @@ A TIME_SHIFT_50 means 0.5 s. Terminal shifts retain trailing silence. The JSON
 retains the original float boundaries; serialization is quantized to 10 ms.
 MIDI-token round trips are checked before a shard is committed.
 
+A final ROSVOT note may be shorter than one F0/serialization step after clipping
+at the end of the recording. Without aligned Procedural evidence it keeps its
+original ROSVOT pitch and float boundaries. SVAMIDI gives every positive note
+at least one 10-ms tick; this can move a sub-grid endpoint by up to 15 ms.
+`subgrid_notes` and the actual maximum boundary error are recorded in the
+round-trip receipt. Binary MIDI and the float-time JSON retain finer timing.
+
 **MIDI tokens are separate from acoustic codec tokens.** MOSS-v2 has 12.5
 80-ms frames/s: 12 codebook indices/frame means 150 indices/s; 32 means 400
 indices/s. A frame contains all codebooks at once. Store arrays as

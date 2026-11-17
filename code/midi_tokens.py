@@ -52,9 +52,14 @@ def roundtrip(notes,duration):
     error=0.
     for a,b in zip(expected,decoded):
         assert a['pitch']==b['pitch']
+        assert abs(b['onset']-q(a['onset'])*RESOLUTION)<1e-8
+        assert abs(b['offset']-max(q(a['onset'])+1,q(a['offset']))*RESOLUTION)<1e-8
         error=max(error,abs(a['onset']-b['onset']),abs(a['offset']-b['offset']))
-    assert error<=.010000001,(error,notes)
-    return dict(passed=True,notes=len(notes),max_boundary_error_seconds=error,quantization_seconds=RESOLUTION,terminal_time=end)
+    # A positive sub-grid note needs at least one serialized tick. If its
+    # onset rounds upward, the endpoint error can approach 1.5 ticks.
+    assert error<=.015000001,(error,notes)
+    return dict(passed=True,notes=len(notes),max_boundary_error_seconds=error,quantization_seconds=RESOLUTION,
+        minimum_serialized_note_seconds=RESOLUTION,subgrid_notes=sum(n['offset']-n['onset']<RESOLUTION for n in notes),terminal_time=end)
 def midi_bytes(notes):
     """Serialize standard MIDI in memory, for direct packed-dataset writes."""
     import io,mido
