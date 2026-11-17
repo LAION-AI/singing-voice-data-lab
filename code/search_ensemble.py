@@ -42,7 +42,13 @@ def gap_notes(ros,proc,duration):
 
 def context(sid):
     d=BENCH/sid;ros=read(d/'note_events/rosvot.json');proc=read(d/'note_events/procedural.json')
-    f=np.load(d/'pitch/f0.npz');times=f['time_seconds'];p,pc=raster(proc['notes'],times)
+    f=np.load(d/'pitch/f0.npz')
+    return context_arrays(ros,proc,f,sid)
+
+
+def context_arrays(ros,proc,f,sid='packed-recording'):
+    """The same frozen rules, without extracting per-recording files."""
+    times=f['time_seconds'];p,pc=raster(proc['notes'],times)
     assert not (pc>1).any(), 'Unexpected Procedural overlap; do not add ambiguous gap notes'
     rr,rc=raster(ros['notes'],times);statistics=[]
     for note in ros['notes']:

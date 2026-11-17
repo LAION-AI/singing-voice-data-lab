@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "records": 56,
+  "audio_hours": 0.4319360995370371,
+  "notes": 5625,
+  "missing_scripts": 0,
+  "archives": 7,
+  "processing_seconds": 22.21073039015755,
+  "time": 1794898792.4500659,
+  "frozen_fusion_reference_tracks": 75,
+  "same_note_pitch_and_times": true,
+  "same_binary_midi": true
+}

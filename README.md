@@ -12,6 +12,18 @@ Song → Mega53 lead-vocal extraction → ROSVOT notes + RMVPE pitch
 
 The default is **`rosvot_procedural_segmented`**: the strongest tested ROSVOT-based combination for joint pitch agreement and coverage in our exploratory benchmark. It is an engineering default, not a claim of verified musical correctness. The original ROSVOT and Procedural predictions and three other fusion recipes remain available.
 
+## Packed synthetic singing corpus
+
+The [public synthetic singing dataset](https://huggingface.co/datasets/laion/synthetic-singing-voice)
+adds the default ROSVOT + Procedural note dictionary, standard MIDI and complete
+flattened MIDI to the original synthetic vocals and MOSS-v2 codes. The
+[packed-data guide](docs/PACKED_DATASETS.md) explains the GENERAL / MIDI Annotation /
+SCRIPT format, archive processing and reproduction. Check the dataset card for
+actual upload progress. The
+[experimental singing checkpoint](https://huggingface.co/laion/Humaneness-Voice-Large-1.7-Singing-Experimental)
+is a proof of concept for learning singing alongside TTS; it predates the new
+MIDI conditioning field.
+
 ## Quick start
 
 Use a Linux CUDA machine for the neural stages, Python 3.10 or newer, and FFmpeg on `PATH`. Install matching CUDA-enabled PyTorch and Torchaudio builds for your machine; the recorded benchmark used PyTorch 2.9.1 / CUDA 12.8. The post-processing and public-demo reproduction also work on CPU.

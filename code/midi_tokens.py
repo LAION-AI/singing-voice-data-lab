@@ -55,8 +55,9 @@ def roundtrip(notes,duration):
         error=max(error,abs(a['onset']-b['onset']),abs(a['offset']-b['offset']))
     assert error<=.010000001,(error,notes)
     return dict(passed=True,notes=len(notes),max_boundary_error_seconds=error,quantization_seconds=RESOLUTION,terminal_time=end)
-def save_midi(notes,path):
-    import mido
+def midi_bytes(notes):
+    """Serialize standard MIDI in memory, for direct packed-dataset writes."""
+    import io,mido
     mid=mido.MidiFile(type=0,ticks_per_beat=500);tr=mido.MidiTrack();mid.tracks.append(tr)
     tr.append(mido.MetaMessage('set_tempo',tempo=500000,time=0));ev=[]
     for n in notes:
@@ -65,7 +66,9 @@ def save_midi(notes,path):
     now=0
     for t,on,p in sorted(ev):
         tr.append(mido.Message('note_on' if on else 'note_off',note=int(p),velocity=90 if on else 0,time=t-now));now=t
-    Path(path).parent.mkdir(parents=True,exist_ok=True);mid.save(path)
+    stream=io.BytesIO();mid.save(file=stream);return stream.getvalue()
+def save_midi(notes,path):
+    Path(path).parent.mkdir(parents=True,exist_ok=True);Path(path).write_bytes(midi_bytes(notes))
 def load_midi(path):
     import mido
     now=0.;active={};notes=[]
